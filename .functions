@@ -251,3 +251,7 @@ function gi() {
 	local IFS=,
 	eval npm install --save-dev grunt-{"$*"}
 }
+
+genpasswd() {
+< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-16};echo;
+}
